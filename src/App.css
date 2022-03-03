@@ -1,38 +1,109 @@
-.App {
-  text-align: center;
+html,
+body {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", 
+  Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+}
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+textarea,
+input {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", 
+  Roboto, Ubuntu, "Helvetica Neue", sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+  display: grid;
+  height: 100vh;
+  place-items: center;
+  margin-top: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main {
+  background: #000;
+  box-shadow: 0 10px 25px rgb(0 0 0 / 10%);
+  width: 95%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border-radius: 10px;
+  height: 750px;
+  position: relative;
+  overflow-y: auto;
 }
 
-.App-link {
-  color: #61dafb;
+.content-input {
+  height: 200px;
+  display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.content-input input {
+  width: 100%;
+  background-color: #000;
+  text-align: right;
+  color: #fff;
+  padding-right: 30px;
+  padding-top: 120px;
+  font-size: 70px;
+  border: none;
+}
+
+.content-input input:disabled {
+  color: #fff !important;
+}
+
+.list-calculator {
+  height: 100%;
+  width: 95%;
+  display: flex;
+  list-style: none;
+  margin: 10px;
+  padding: 0;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+} 
+
+.list-calculator li {
+  width: 21%;
+  font-size: 35px;
+  padding-top: 19px;
+  margin: 5px;
+  text-align: center;
+  border-radius: 9999px;
+  color: #fff;
+  height: 85px;
+} 
+
+.list-gray {
+  background-color: #b9b9b9;
+  color: #000 !important;
+}
+
+.list-yellow {
+  background-color: #ffb000;
+}
+
+.list-dark-gray {
+  background-color: #4a4a4a;
+}
+
+.zero {
+  width: 46% !important;
+  text-align: left !important;
+  padding-left: 30px;
+}
+
+@media (min-width: 400px) {
+  .list-calculator li { 
+    width: 22%;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (min-width: 800px) {
+  .main {
+    width: 500px;
   }
 }
